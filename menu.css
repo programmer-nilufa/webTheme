@@ -1,0 +1,125 @@
+.menu-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.toggler{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+.hambarger{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.hambarger>div{
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: orangered;
+    transition: .4s;
+}
+
+.hambarger>div:before, .hambarger>div:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: orangered;
+    transition: .4s;
+}
+.hambarger>div:before{
+    top: -10px;
+}
+.hambarger>div:after{
+    top: 10px;
+}
+.toggler:checked + .hambarger>div{
+    transform: rotate(135deg);
+}
+
+.toggler:checked:hover + .hambarger>div{
+    transform: rotate(225deg);
+}
+
+.toggler:checked + .hambarger>div:after, .toggler:checked + .hambarger>div:before{
+    transform: rotate(90deg);
+    top: 0;
+}
+.toggler:checked ~ .menu{
+    visibility: visible;
+}
+.toggler:checked ~ .menu > div{
+    transform: translateX(-50%) translateY(-50%);
+}
+.toggler:checked ~ .menu > div > div{
+    opacity: 1;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: .6s;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu > div{
+    position: absolute;
+    width: 1600px;
+    height: 1600px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-150%) translateY(-50%);
+    background-color: rgb(238, 151, 120, 0.9);
+    transition: .6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu > div > div{
+    max-width: 90vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+.menu > div > div > ul > li{
+    list-style: none;
+}
+.menu > div > div > ul > li > a{
+    text-decoration: none;
+    margin:.8rem;
+    display:inline-block;
+    font-size: 1.7rem;
+    font-weight: 50;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: .3s;
+}
+.menu > div > div > ul > li > a:hover{
+    color: rgb(17, 11, 5);
+    background:rgb(240, 88, 32);
+}

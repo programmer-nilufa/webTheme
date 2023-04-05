@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(245, 222, 179);
+}
+h1{
+    background: rgb(239, 149, 117);
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    border: 3px solid black;
+}
+ul  li{
+    font-size: 30px;
+    line-height: 60px;
+    list-style-position: outside;
+    list-style-type:square;
+    color: orangered;
+}

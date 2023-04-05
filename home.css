@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(245, 222, 179);
+}
+marquee{ 
+    background-color:rgb(246, 106, 50);
+    font-size: 45px;
+    color: wheat;
+    font-family: 'Courier New',bold, Courier, monospace;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+}
+.grid-container1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grid-container3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+img{
+    width: 200px;
+}
+.img {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 2s;
+    color: rgb(14, 13, 13);
+    background-color: rgb(251, 147, 106);
+    align-items: center;
+    text-align: center;
+    border: 10px solid rgb(245, 222, 179);
+}
+.img:hover{
+    background-color: rgb(47, 85, 61);
+    color: rgb(255, 255, 255);
+}
